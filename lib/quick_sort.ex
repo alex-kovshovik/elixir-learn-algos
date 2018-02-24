@@ -6,10 +6,8 @@ defmodule QuickSort do
   [-24, -5, 1, 2, 3, 4, 5, 8, 45, 98, 249]
   """
   def sort([]), do: []
-  def sort([a]), do: [a]
   def sort([head | tail]) do
     {low, high} = Enum.split_with(tail, fn n -> n < head end)
     sort(low) ++ [ head | sort(high) ]
   end
 end
-
