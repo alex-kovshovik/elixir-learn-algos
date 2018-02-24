@@ -1,4 +1,11 @@
 defmodule QuickSort do
+  @doc """
+  Sorts the passed in list using Quick Sort algorithm
+
+  iex> QuickSort.sort([5, 3, 8, 4, 1, 45, 98, 2, -5, -24, 249])
+  [-24, -5, 1, 2, 3, 4, 5, 8, 45, 98, 249]
+  """
+
   def sort([]), do: []
   def sort([a]), do: [a]
   def sort([head | tail]) do
